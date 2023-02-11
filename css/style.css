@@ -28,11 +28,11 @@ body {
 
 .content {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
-    margin: -250px 0 0 -250px;
+    margin: -150px 0 0 -150px;
     max-width: 500px;
-    /* height: 450px; */
+    height: 450px;
     color: white;
 }
 
