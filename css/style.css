@@ -28,7 +28,7 @@ body {
 
 .content {
     position: absolute;
-    top: 35%;
+    top: 40%;
     left: 42%;
     margin: -150px 0 0 -150px;
     max-width: 500px;
@@ -56,6 +56,30 @@ body {
     .content {
         top: 35%;
         left: 47%;
+        margin: -150px 0 0 -150px;
+    }
+}
+
+@media screen and (min-width: 321px) and (max-width: 375px) {
+    .content {
+        top: 35%;
+        left: 40%;
+        margin: -150px 0 0 -150px;
+    }
+}
+
+@media screen and (min-width: 376px) and (max-width: 425px) {
+    .content {
+        top: 35%;
+        left: 35%;
+        margin: -150px 0 0 -150px;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+    .content {
+        top: 40%;
+        left: 37%;
         margin: -150px 0 0 -150px;
     }
 }
