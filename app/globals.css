@@ -2,26 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Lexend, sans-serif;
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+
+
+  /* Button Styles */
+  .button-main{
+    @apply  text-sm bg-secondary text-white px-4 py-2 rounded focus:outline-none;
+  }
+  
+
+}
+
+/* Define the keyframes for the blinking effect */
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
   }
 }
+
+/* Apply the animation to the blinking-dot class */
+.blinking-dot {
+  animation: blink 0.7s infinite;
+}
+
+
+
