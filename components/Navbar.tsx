@@ -1,12 +1,12 @@
 "use client"
 
-import { navigation } from '@/constants'
-// import Image from 'next/image'
-import Link from 'next/link'
-import React, { useState } from 'react'
-import { MdMenu, MdOutlineClose } from 'react-icons/md'
-import { Button } from './ui/button'
-import { GoArrowUpRight } from 'react-icons/go'
+import { navigation } from '@/constants';
+import Image from 'next/image';
+import Link from 'next/link';
+import React, { useState } from 'react';
+import { MdMenu, MdOutlineClose } from 'react-icons/md';
+import { Button } from './ui/button';
+import { GoArrowUpRight } from 'react-icons/go';
 
 const Navbar = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -16,17 +16,24 @@ const Navbar = () => {
         <header className='sticky inset-x-0 top-0 z-50'>
             <nav className='bg-white flex items-center justify-between p-5 xl:px-36 border border-b-secondary/20'>
                 <div className="flex lg:flex-1">
-                    <Link href="/" className='-m-1.5 -p-1.5'>
-                        <h1 className='font-bold text-2xl text-secondary '>
+                    <Link href="/" className=''>
+                        {/* <h1 className='font-bold text-2xl text-secondary '>
                             Strike<span className='text-primary '>Climate</span>
-                        </h1>
+                        </h1> */}
                         {/* <Image
-                            src="/"
+                            src="/images/strikeclimate.png"
                             alt="Logo"
                             width={100}
                             height={100}
                             className=''
                         /> */}
+                        <Image
+                            src="/images/mstile-new.png"
+                            alt="Logo"
+                            width={180}
+                            height={100}
+                            className=''
+                        />
                     </Link>
                 </div>
                 <div className="flex lg:hidden">
