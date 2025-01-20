@@ -31,6 +31,10 @@ const config: Config = {
   				foreground: '#fff'
   			},
   		},
+		  backgroundImage: {
+			"hero": "url('/images/lake-2.jpg')",			
+			"add-on": "url('/images/add-on.png')",			
+		  },
   	}
   },
   plugins: [require("tailwindcss-animate")],
