@@ -7,37 +7,47 @@ import React, { useState } from 'react';
 import { MdMenu, MdOutlineClose } from 'react-icons/md';
 import { Button } from './ui/button';
 import { GoArrowUpRight } from 'react-icons/go';
+import ThemeSwitch from './ThemeSwitch';
+
+
+import { useTheme } from 'next-themes';
 
 const Navbar = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const toggleMenu = () => setMobileMenuOpen(!mobileMenuOpen);
 
+    const { theme } = useTheme();
+
     return (
         <header className='sticky inset-x-0 top-0 z-50'>
-            <nav className='bg-white flex items-center justify-between p-5 xl:px-36 border border-b-secondary/20'>
+            <nav className='dark:bg-primary bg-white flex items-center justify-between p-5 xl:px-36 border-b border-b-white/10'>
                 <div className="flex lg:flex-1">
                     <Link href="/" className=''>
-                        {/* <h1 className='font-bold text-2xl text-secondary '>
-                            Strike<span className='text-primary '>Climate</span>
-                        </h1> */}
-                        {/* <Image
-                            src="/images/strikeclimate.png"
-                            alt="Logo"
-                            width={100}
-                            height={100}
-                            className=''
-                        /> */}
-                        <Image
-                            src="/images/mstile-new.png"
-                            alt="Logo"
-                            width={180}
-                            height={100}
-                            className=''
-                        />
+                        {theme === 'dark' ? (
+                            < Image
+                                src="/images/mstile-new-white.png"
+                                alt="Logo"
+                                width={180}
+                                height={100}
+                                className=''
+                            />
+                        ) : (
+                            < Image
+                                src="/images/mstile-new.png"
+                                alt="Logo"
+                                width={180}
+                                height={100}
+                                className=''
+                            />
+                        )
+                        }
                     </Link>
                 </div>
                 <div className="flex lg:hidden">
                     {/* Button to open mobile menu on small screens */}
+                    <div className='mr-1'>
+                        <ThemeSwitch />
+                    </div>
                     <button
                         type="button"
                         onClick={() => setMobileMenuOpen(true)}
@@ -46,26 +56,34 @@ const Navbar = () => {
                         <span className="sr-only">Open main menu</span>
                         <MdMenu aria-hidden="true" className="h-6 w-6 text-secondary" />
                     </button>
+
                 </div>
                 <div className='hidden lg:flex lg:gap-x-12'>
                     {/* Navigation links for large screens */}
                     {navigation.map((item) => (
                         <Link
                             key={item.name}
-                            href={item.href}// Use fragment identifier
-                            className='text-secondary font-light  leading-6 hover:text-primary'
+                            href={item.href}
+                            className=' font-light  leading-6 '
                         >
                             {item.name}
                         </Link>
                     ))}
                 </div>
-                <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <Button asChild className='button-main'>
-                        <Link href="#contact">
-                            <span className="blinking-dot inline-block bg-primary rounded-full w-2 h-2 mr-1"></span>
-                            Contact Us<GoArrowUpRight />
-                        </Link>
-                    </Button>
+                <div className='items-center hidden lg:flex lg:flex-1 lg:justify-end'>
+                    <div className='mr-3'>
+                        <ThemeSwitch />
+                    </div>
+
+                    <div className="">
+
+                        <Button asChild className='button-main'>
+                            <Link href="#contact">
+                                <span className="blinking-dot inline-block bg-primary rounded-full w-2 h-2 mr-1"></span>
+                                Contact Us<GoArrowUpRight />
+                            </Link>
+                        </Button>
+                    </div>
                 </div>
             </nav>
 
@@ -73,12 +91,12 @@ const Navbar = () => {
             <div className=''>
                 {mobileMenuOpen && (
                     <div
-                        className="fixed inset-0 bg-secondary bg-opacity-50 z-40"
+                        className="fixed inset-0 bg-secondary bg-opacity-70 z-40"
                         onClick={toggleMenu}
                     />
                 )}
                 <ul
-                    className={`fixed inset-y-0 right-0 bg-white text-secondary flex flex-col w-[75%] space-y-16 h-screen items-center z-50 transition-transform duration-700 ease-in-out
+                    className={`fixed inset-y-0 right-0 bg-white dark:bg-primary text-secondary dark:text-white flex flex-col w-[75%] space-y-16 h-screen items-center z-50 transition-transform duration-700 ease-in-out
                     ${mobileMenuOpen ? '-translate-x-0' : 'translate-x-full'} md:hidden py-32 px-12`}
 
                 >

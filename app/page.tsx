@@ -1,8 +1,11 @@
 import About from "@/components/About";
+import AddOn from "@/components/AddOn";
+import ContactUs from "@/components/ContactUs";
 import CoreValues from "@/components/CoreValues";
 import Footer from "@/components/Footer";
 import Herosection from "@/components/Herosection";
 import Navbar from "@/components/Navbar";
+
 
 
 export default function Home() {
@@ -12,6 +15,8 @@ export default function Home() {
       <Herosection />
       <CoreValues />
       <About />
+      <AddOn />
+      <ContactUs />
       <Footer />
       
     </main>

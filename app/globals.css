@@ -20,6 +20,19 @@ body {
   .button-main{
     @apply  text-sm bg-secondary text-white px-4 py-2 rounded focus:outline-none;
   }
+  .button-switch{
+    @apply  text-lg bg-secondary text-white px-4 py-2 rounded focus:outline-none;
+  }
+  .inputStyle-3{
+    @apply w-full p-4 border-none  dark:focus:text-white  focus:text-secondary placeholder:border-primary;
+  }
+  .inputSpan{
+    @apply text-gray-2;
+  }
+  .inputSpan-2{
+    @apply text-red-600;
+  }
+
   
 
 }
