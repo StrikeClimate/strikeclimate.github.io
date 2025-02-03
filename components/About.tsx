@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const About = () => {
     return (
-        <section id='about' className='py-12 lg:py-24 bg-[#E9E9E9]/30'>
+        <section id='about' className='py-12 lg:py-24 dark:bg-[#E9E9E9]/10 bg-[#E9E9E9]/30'>
             <SlideIn direction='bottom'>
                 <div className='container mx-auto max-w-[1280px] flex flex-col md:flex-row gap-8 lg:gap-16 items-center'>
                     <div className="w-full lg:w-1/2">
@@ -17,7 +17,7 @@ const About = () => {
                         />
                     </div>
                     <div className="w-full lg:w-1/2">
-                        <h2 className='text-4xl font-semibold text-secondary'>
+                        <h2 className='text-4xl font-semibold'>
                             About <span className='text-primary'>Us</span>
                         </h2>
                         <p className='text-md tex mt-4'>

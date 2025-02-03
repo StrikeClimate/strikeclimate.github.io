@@ -4,7 +4,6 @@ import React from 'react'
 import { Button } from './ui/button'
 import { GoArrowUpRight } from 'react-icons/go'
 import Link from 'next/link'
-
 import SlideIn from "@/components/motion/SlideIn";
 
 
@@ -34,7 +33,6 @@ const Herosection = () => {
                     <div className='justify-end pr-12 pt-16'>
                         <SlideIn direction='top'>
                             <div className=' bg-[#E9E9E9]/40 bg- p-4 max-w-sm space-y-2 rounded-lg shadow-2xl border max-md:hidden items-end'>
-                            {/* <div className='absolute top-56 right-48 bg-[#E9E9E9]/40 bg- p-4 max-w-sm space-y-2 rounded-lg shadow-2xl border max-md:hidden'> */}
                                 <h2 className='text-xl font-medium max-w-sm text-secondary/90'>
                                     Innovative Solutions <br /> for Sustainable Energy Development
                                 </h2>
@@ -45,7 +43,6 @@ const Herosection = () => {
                                 <Button variant="outline" size="icon" className='bg-secondary text-primary rounded-full border-none text-lg font-bold'>
                                     <GoArrowUpRight />
                                 </Button>
-
                             </div>
                         </SlideIn>
                     </div>
