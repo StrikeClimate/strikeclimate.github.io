@@ -120,7 +120,7 @@ const Navbar = () => {
                             </li>
                         )
                     })}
-                    <Button asChild className='button-main'>
+                    <Button asChild className='button-main' onClick={toggleMenu}>
                         <Link href="#contact">
                             <span className="blinking-dot inline-block bg-primary rounded-full w-2 h-2 mr-1"></span>
                             Contact Us<GoArrowUpRight />
