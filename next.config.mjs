@@ -4,6 +4,7 @@ const nextConfig = {
     distDir: "docs",
     images: {
         unoptimized: true,
+        domains: ['images.pexels.com'],
     },
 };
 

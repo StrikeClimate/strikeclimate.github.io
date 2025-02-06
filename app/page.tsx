@@ -1,24 +1,20 @@
-import About from "@/components/About";
-import AddOn from "@/components/AddOn";
-import ContactUs from "@/components/ContactUs";
-import CoreValues from "@/components/CoreValues";
-import Footer from "@/components/Footer";
-import Herosection from "@/components/Herosection";
-import Navbar from "@/components/Navbar";
-
+import { 
+  HomeHero, 
+  CoreValues, 
+  About, 
+  AddOn, 
+  ContactUs, 
+} from "@/components/HomePage";
 
 
 export default function Home() {
   return (
     <main>
-      <Navbar />
-      <Herosection />
+      <HomeHero />
       <CoreValues />
       <About />
       <AddOn />
-      <ContactUs />
-      <Footer />
-      
+      <ContactUs />      
     </main>
   );
 }

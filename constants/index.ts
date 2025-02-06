@@ -15,19 +15,31 @@ import { MdOutlineBiotech } from "react-icons/md";
 export const navigation = [
   { name: "Home", href: "/" },
   { name: "About", href: "#about" },
-  { name: "Case Studies", href: "#case-study" },
+  { name: "Case Studies", href: "/case-studies"}
   //  { name: 'Blog', href: '#blog' },
   // { name: 'Contact', href: '#contact' },
 ];
 
 // Home Page
-interface HeroItem {
+interface HomeHeroItem {
   text: string;
   subText: string;
 }
-export const Hero: HeroItem[] = [
+export const HomeHero: HomeHeroItem[] = [
   {
     text: "Powering Sustainability through Climate Action using cutting-edge technologies",
+    subText:
+      "We drive sustainability by leveraging innovative technologies that reduce environmental impact and create a cleaner, greener future.",
+  },
+];
+
+interface CaseStudiesHeroItem {
+  text: string;
+  subText: string;
+}
+export const CaseStudiesHero: CaseStudiesHeroItem[] = [
+  {
+    text: "Our Case Studies",
     subText:
       "We drive sustainability by leveraging innovative technologies that reduce environmental impact and create a cleaner, greener future.",
   },

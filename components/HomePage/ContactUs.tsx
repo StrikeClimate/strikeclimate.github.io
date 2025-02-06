@@ -1,8 +1,9 @@
 import { contactBox } from '@/constants'
 import Link from 'next/link'
 import React from 'react'
-import ContactForm from './ContactForm'
-import SlideIn from './motion/SlideIn'
+import ContactForm from '@/components/ContactForm'
+import SlideIn from '@/components/motion/SlideIn'
+
 
 const ContactUs = () => {
 
