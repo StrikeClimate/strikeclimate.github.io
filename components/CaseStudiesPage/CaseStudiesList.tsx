@@ -1,5 +1,5 @@
 import React from "react";
-import { casestudy } from '@/components/constant'
+import { casestudy } from '@/components/constants'
 import Image from 'next/image'
 import TruncateText from '@/components/TruncateText'
 import Link from 'next/link'
@@ -9,9 +9,9 @@ const CaseStudiesList = () => {
 
   return (
     <section className="py-12 md:py-24 lg:py-24">
-      <div className="container mx-auto md:max-w-[980px] flex flex-col md:flex-row gap-12 md:gap-32 items-center w-full">
+      <div className="container mx-auto md:max-w-5xl flex flex-col md:flex-row gap-12 md:gap-32 items-center w-full">
         <div className='flex items-center justify-center  w-full'>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-center gap-3 max-w-5xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-center gap-5 ">
             {casestudy.length === 0 ? (
               <p className="col-span-full text-center">
                 No case studies available at the moment.

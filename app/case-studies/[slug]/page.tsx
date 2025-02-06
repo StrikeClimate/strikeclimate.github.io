@@ -1,10 +1,11 @@
 import React from 'react'
-import { casestudy } from '@/components/constant'
+import { casestudy } from '@/components/constants'
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import HeroComponent from '@/components/HeroComponent';
 import SlideIn from '@/components/motion/SlideIn';
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '@/components/ui/breadcrumb';
+import Image from 'next/image';
 
 export async function generateStaticParams() {
     return casestudy.map((post) => ({
@@ -36,6 +37,7 @@ const page = ({ params }: { params: { slug: string } }) => {
                 <div className="md:flex w-full lg:flex">
                     <div className="flex flex-col">
                         <SlideIn direction='bottom'>
+                            
                             <div className="mb-4 text-white">
                                 <Breadcrumb>
                                     <BreadcrumbList>
@@ -62,7 +64,23 @@ const page = ({ params }: { params: { slug: string } }) => {
             </HeroComponent>
 
             <div className='container mx-auto flex flex-col justicy-center py-16 max-w-4xl'>
-                Rich Mercy of the Lord, There is Nothing Like it!
+                <div>
+                    <Image 
+                        src={post.image}
+                        alt={post.title}
+                        width={800}
+                        height={800}
+                        className='w-full my-8'
+                    />
+                    <h2 className='font-bold text-2xl lg:text-3xl mb-12'><span className='text-primary'>CaseStudy Title:</span> {post.title}</h2>
+                    <h3 className='font-bold text-2xl mb-2'>{post.problemTitle}</h3>
+                    <p className='mb-9 font-light'>{post.problemContent}</p>
+                    <h3 className='font-bold text-2xl mb-2'>{post.solutionTitle}<span className="text-primary"> StrikeClimate</span></h3>
+                    <p className='mb-9 font-light'>{post.solutionContent}</p>
+                    <h3 className='font-bold text-2xl mb-2'>{post.impactTitle}</h3>
+                    <p className='mb-9 font-light'>{post.impactContent}</p>
+
+                </div>
             <div className=" py-8">
             </div>
 

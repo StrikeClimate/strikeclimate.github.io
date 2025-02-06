@@ -15,6 +15,7 @@ export default function CaseStudiesHero() {
             >
                 <div className="flex justify-center w-full">
                     <div className="flex flex-col lg:items-center">
+                    <SlideIn direction='top'>
                         <div className="mb-4 text-white">
                             <Breadcrumb>
                                 <BreadcrumbList>
@@ -28,6 +29,7 @@ export default function CaseStudiesHero() {
                                 </BreadcrumbList>
                             </Breadcrumb>
                         </div>
+                    </SlideIn>
                         <SlideIn direction='bottom'>
                             {CaseStudiesHeroData.map((item, index) => (
                                 <div key={index} className='space-y-2 lg:text-center'>
