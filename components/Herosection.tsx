@@ -1,5 +1,5 @@
 
-import { Hero } from '@/constants'
+import { HomeHero } from '@/constants'
 import React from 'react'
 import { Button } from './ui/button'
 import { GoArrowUpRight } from 'react-icons/go'
@@ -14,7 +14,7 @@ const Herosection = () => {
                 <div className="container mx-auto md:max-w-[1280px] flex flex-row h-full justify-between items-center z-30">
                     <div>
                         <SlideIn direction='bottom'>
-                            {Hero.map((item, index) => (
+                            {HomeHero.map((item, index) => (
                                 <div key={index} className='max-w-xl space-y-2 md:space-y-4 '>
                                     <h2 className='text-white text-2xl font-medium lg:text-4xl'>{item.text}</h2>
                                     <h5 className='text-white max-w-lg'>{item.subText}</h5>

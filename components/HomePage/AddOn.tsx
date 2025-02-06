@@ -1,6 +1,6 @@
 import React from 'react'
-import SlideIn from './motion/SlideIn'
-import { Button } from './ui/button'
+import SlideIn from '@/components/motion/SlideIn'
+import { Button } from '@/components/ui/button'
 import { GoArrowUpRight } from 'react-icons/go';
 
 const AddOn = () => {
