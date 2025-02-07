@@ -12,14 +12,18 @@ import { FaBuildingShield } from "react-icons/fa6";
 import { MdOutlineBiotech } from "react-icons/md";
 
 // Navigations
-export const navigation = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "#about" },
-  { name: "Case Studies", href: "/case-studies"}
-  //  { name: 'Blog', href: '#blog' },
-  // { name: 'Contact', href: '#contact' },
+// export const navigation = [
+//   { name: "Home", href: "/" },
+//   { name: "About", href: "#about" },
+//   { name: "Case Studies", href: "/case-studies"}
+//   //  { name: 'Blog', href: '#blog' },
+//   // { name: 'Contact', href: '#contact' },
+// ];
+export const navLinks = [
+  { id: "home", label: "Home", href: "/" },
+  { id: "about", label: "About", href: "/#about" },
+  { id: "case-studies", label: "Case Studies", href: "/case-studies" },
 ];
-
 // Home Page
 interface HomeHeroItem {
   text: string;
