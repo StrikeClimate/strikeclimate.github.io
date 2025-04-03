@@ -1,11 +1,19 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = { 
-    output: "export", 
-    distDir: "docs",
-    images: {
-        unoptimized: true,
-        domains: ['images.pexels.com'],
-    },
+import withPWA from "@ducanh2912/next-pwa";
+
+const nextConfig = {
+  output: "export",
+  distDir: "docs",
+  images: {
+    unoptimized: true,
+    domains: ["images.pexels.com"],
+  },
 };
 
-export default nextConfig;
+const config = withPWA({
+  dest: "public",
+  register: true,
+  skipWaiting: true,
+})(nextConfig);
+
+export default config;

@@ -1,4 +1,5 @@
 import posts from '@/app/data/post.json';
+import Link from 'next/link';
 
 export default function BlogPage() {
     return (
@@ -10,10 +11,10 @@ export default function BlogPage() {
                         key={post.id}
                         className="p-4 border rounded-lg hover:bg-gray-50"
                     >
-                        <a href={`/blog/${post.slug}`}>
+                        <Link href={`/blog/${post.slug}`}>
                             <h2 className="text-xl font-semibold">{post.title}</h2>
                             <p className="text-gray-500 mt-2">{post.date}</p>
-                        </a>
+                        </Link>
                     </article>
                 ))}
             </div>

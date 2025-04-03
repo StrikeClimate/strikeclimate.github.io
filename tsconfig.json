@@ -33,7 +33,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "docs/types/**/*.ts"
-  ],
+, "public/sw.js"  ],
   "exclude": [
     "node_modules"
   ]

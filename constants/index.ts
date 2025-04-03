@@ -45,7 +45,7 @@ export const CaseStudiesHero: CaseStudiesHeroItem[] = [
   {
     text: "Our Case Studies",
     subText:
-      "We drive sustainability by leveraging innovative technologies that reduce environmental impact and create a cleaner, greener future.",
+      "We are committed to driving sustainability by harnessing cutting-edge technologies that minimize environmental impact. Explore our case studies to see how we create cleaner, greener, and more efficient solutions for a better tomorrow.",
   },
 ];
 
