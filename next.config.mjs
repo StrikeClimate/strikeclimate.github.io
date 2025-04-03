@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
-import withPWA from "@ducanh2912/next-pwa";
+
+// const withPWA = require("@ducanh2912/next-pwa").default({
+//   dest: "public",
+// });
 
 const nextConfig = {
   output: "export",
@@ -10,10 +13,4 @@ const nextConfig = {
   },
 };
 
-const config = withPWA({
-  dest: "public",
-  register: true,
-  skipWaiting: true,
-})(nextConfig);
-
-export default config;
+export default nextConfig;
