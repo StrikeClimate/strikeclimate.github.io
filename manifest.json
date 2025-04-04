@@ -1,7 +1,7 @@
 {
   "name": "Strike Climate",
   "short_name": "StrikeClimate",
-  "description": "Climate Strike Movement",
+  "description": "Strike Climate Movement",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
