@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "slug": "first-post",
+    "title": "My First Blog Post",
+    "date": "2023-08-01",
+    "content": "This is the content of my first blog post..."
+  },
+  {
+    "id": 2,
+    "slug": "nextjs-guide",
+    "title": "Next.js Tutorial",
+    "date": "2023-08-05",
+    "content": "Learn how to use Next.js dynamic routes..."
+  }
+]
